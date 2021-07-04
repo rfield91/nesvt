@@ -1,6 +1,6 @@
 body {
     padding-top: 2rem;
-    background-color: #bdc1c7 !important;
+    /* background-color: #bdc1c7 !important; */
 }
 
 .navbar {
@@ -9,6 +9,10 @@ body {
 
 .card {
     word-wrap: break-word;
+}
+
+.driver-classes {
+    background: transparent;
 }
 
 
