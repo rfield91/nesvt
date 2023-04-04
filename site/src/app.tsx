@@ -11,6 +11,7 @@ import Gallery from "./scenes/gallery/gallery";
 import Header from "./scenes/global/header";
 import HelmetAlert from "./scenes/global/helmetAlert";
 import Home from "./scenes/home/home";
+import Live from "./scenes/live";
 import Results from "./scenes/results/Results";
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
 
   return (
     <>
-      {useLocation().pathname !== "/results" ? <Header /> : null}
+      {useLocation().pathname !== "/results" && useLocation().pathname !== "/live" ? <Header /> : null}
       <Routes>
         <Route path="/" element={<Home msrEvents={events}/>} />
         <Route path="/gallery" element={<Gallery />} />
@@ -60,8 +61,9 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/events" element={<Events msrEvents={events}/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/live" element={<Live />} />
       </Routes>
-      {useLocation().pathname !== "/results" ? <HelmetAlert /> : null}
+      {useLocation().pathname !== "/results" && useLocation().pathname !== "/live" ? <HelmetAlert /> : null}
     </>
   );
 }
